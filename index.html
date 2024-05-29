@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>당신의 소개 대결 게임</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+        }
+        .quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>당신의 소개 대결 게임</h1>
+        <h2>당신의 지식을 시험해보세요!</h2>
+        <img src="ss.jpg" alt="이 사람은 저의 마음속에 일등 연예인 제리얌입니다">
+        <p>당신이 좋아하는 활동이나 취미는 무엇일까요?</p>
+        <button onclick="checkAnswer('nap')">낮잠자기</button>
+        <button onclick="checkAnswer('reading')">책 읽기</button>
+        <button onclick="checkAnswer('music')">음악 감상</button>
+        <button onclick="checkAnswer('gaming')">게임하기</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function checkAnswer(answer) {
+            if (answer === 'nap') {
+                document.getElementById('result').innerHTML = "정답입니다! 당신은 낮잠자는 것을 좋아하네요. 낯을 많이 가리지만 친해지면 재밌는 성격이랍니다! 당신이 좋아하는 게임은 브롤스타즈인가요?";
+            } else {
+                document.getElementById('result').innerHTML = "틀렸습니다! 당신은 낮잠자는 것을 좋아하네요. 낯을 많이 가리지만 친해지면 재밌는 성격이랍니다! 당신이 좋아하는 게임은 브롤스타즈인가요?";
+            }
+        }
+    </script>
+</body>
+</html>
